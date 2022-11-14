@@ -1,0 +1,101 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+{% block 'main' %}
+<div class="jumbotron jumbotron-fluid mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url({% static 'home/images/header.jpg' %});">
+    <div class="container text-center py-5">
+        <h1 class="text-white display-3">Service</h1>
+        <div class="d-inline-flex align-items-center text-white">
+            <p class="m-0"><a class="text-white" href="{% url 'home' %}">Home</a></p>
+            <i class="fa fa-circle px-3"></i>
+            <p class="m-0">Service</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5" style="margin-top:-70px" id="air">
+    <div class="container-fluid bg-secondary my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid w-100" src="{% static 'home/images/air.jpeg' %}" style="max-height:300px" alt="">
+                </div>
+                <div class="col-lg-7 py-5 py-lg-0">
+                    <h1 class="mb-4">Air Freight</h1>
+                    <p class="mb-4">Transport your urgent and time critical cargo with our reduced cost air freight to over hundred different countries across the world. Save time and money.</p>
+                    <ul class="list-inline">
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Super Fast</h6>
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Cost Effective</h6></li>
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Super Secure</h6></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5" style="margin-top:-70px" id="ship">
+    <div class="container-fluid bg-secondary my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid w-100" src="{% static 'home/images/ship.jpeg' %}" style="max-height:300px" alt="">
+                </div>
+                <div class="col-lg-7 py-5 py-lg-0">
+                    <h1 class="mb-4">Ocean Freight</h1>
+                    <p class="mb-4">As one of the largest container shipping company in the world, we move millions of container yearly and deliver all over the world</p>
+                    <ul class="list-inline">
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Very Secure</h6>
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Affordable</h6></li>
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Insured</h6></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5" style="margin-top:-70px" id="truck">
+    <div class="container-fluid bg-secondary my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid w-100" src="{% static 'home/images/truck.jpeg' %}" style="max-height:300px" alt="">
+                </div>
+                <div class="col-lg-7 py-5 py-lg-0">
+                    <h1 class="mb-4">Inland Service</h1>
+                    <p class="mb-4">By Truck, rail or barge, we take your goods from one doorstep to the next, whether a mile or a thousand mile.</p>
+                    <ul class="list-inline">
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Seamless Process</h6>
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Real Time Tracking</h6></li>
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>24/7 Customer Support</h6></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5" style="margin-top:-70px" id="storage">
+    <div class="container-fluid bg-secondary my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid w-100" src="{% static 'home/images/storage.jpeg' %}" style="max-height:300px" alt="">
+                </div>
+                <div class="col-lg-7 py-5 py-lg-0">
+                    <h1 class="mb-4">Cargo Storage</h1>
+                    <p class="mb-4">We offer affordable short and long term storage solutions for your cargo. No need for paying high demurrage costs</p>
+                    <ul class="list-inline">
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Multi Options</h6>
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Flexible Payment</h6></li>
+                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Short/Long Term</h6></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock %}

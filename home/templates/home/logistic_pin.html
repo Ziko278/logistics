@@ -1,0 +1,27 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+{% block 'main' %}
+<!-- Header Start -->
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="jumbotron jumbotron-fluid mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url({% static 'home/images/header.jpg' %});">
+        <div class="container text-center py-5">
+            <h1 class="text-primary mb-4" style="font-family:courier;font-size:18px">The Shipment detail is protected, input the pin to view details</h1>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+
+                        <input type="text" class="form-control border-light" style="padding: 30px;" required name="pin" placeholder="Enter the Tracking Pin">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-3">Proceed</button>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</form>
+
+
+
+{%endblock %}

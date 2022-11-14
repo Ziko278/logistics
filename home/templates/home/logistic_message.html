@@ -1,0 +1,28 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+{% block 'main' %}
+
+
+<div class="container-fluid pt-5" style="margin-top:-70px">
+    <div class="container-fluid bg-secondary my-5">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-12 py-5 py-lg-0">
+                    {% if status == 'wrong_id' %}
+                        <h1 class="mb-4 text-danger">Invalid Tracking ID</h1>
+                        <p class="mb-4">There seem to be no match for the id you entered. please check the ID and try again.</p>
+                    {% endif %}
+
+                    {% if status == 'wrong_pin' %}
+                        <h1 class="mb-4 text-danger">Incorrect Tracking Pin</h1>
+                        <p class="mb-4">The pin entered is incorrect. please check the Pin and try again.</p>
+                    {% endif %}
+                    <a href="{% url 'home' %}" class="btn btn-primary mt-3 py-2 px-4">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock %}

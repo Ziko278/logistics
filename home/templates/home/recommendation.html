@@ -1,0 +1,105 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+{% load humanize %}
+{% block 'main' %}
+    <!-- Services Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <h1 class="mb-4">Our Recommendation</h1>
+            </div>
+            <div class="row pb-3">
+                {% if recommended_mode == 'flight' %}
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                        <i class="fa fa-2x fa-plane text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Air Freight</h6>
+                    </div>
+                    <p>Due to the nature of transportation, we highly recommend our flight for the transportation which is very secure fast and affordable.</p>
+
+                </div>
+                {% endif %}
+
+                {% if recommended_mode == 'ship' %}
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                        <i class="fa fa-2x fa-ship text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Ocean Freight</h6>
+                    </div>
+                    <p>We recommend our ocean mode freight. it is very secure and affordable. It best suit this particular logistic.</p>
+                </div>
+                {% endif %}
+                {% if recommended_mode == 'truck' %}
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                        <i class="fa fa-2x fa-truck text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Land Transport</h6>
+                    </div>
+                    <p>Due to the short distance of transportation, we highly recommend our inland mode of transportation which is very secure fast and affordable.</p>
+
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% if alternative_mode %}
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <h1 class="mb-4">Alternative</h1>
+        </div>
+        <div class="row pb-3">
+            {% if recommended_mode == 'flight' %}
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                    <i class="fa fa-2x fa-plane text-dark pr-3"></i>
+                    <h6 class="text-white font-weight-medium m-0">Air Freight</h6>
+                </div>
+                <p>You can also make use of our air freight which serves quite as efficiently, which just a little extra cost.</p>
+
+            </div>
+            {% endif %}
+
+            {% if recommended_mode == 'ship' %}
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                    <i class="fa fa-2x fa-ship text-dark pr-3"></i>
+                    <h6 class="text-white font-weight-medium m-0">Ocean Freight</h6>
+                </div>
+                <p>You may also consider our ocean freight which is second best for the task.</p>
+            </div>
+            {% endif %}
+            {% if recommended_mode == 'truck' %}
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                    <i class="fa fa-2x fa-truck text-dark pr-3"></i>
+                    <h6 class="text-white font-weight-medium m-0">Land Transport</h6>
+                </div>
+                <p>Our inland transport system can also serve as an alternative.</p>
+
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endif %}
+
+
+<div class="container-fluid pt-5">
+    <div class="container">
+
+        <div class="row pb-3">
+
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center bg-dark mb-4 p-4" style="color:white">Thank you for getting across, we will get back to you shortly</p>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+{%endblock%}

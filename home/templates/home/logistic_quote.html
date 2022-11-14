@@ -1,0 +1,63 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+{% block 'main' %}
+<!-- Header Start -->
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="jumbotron jumbotron-fluid mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url({% static 'home/images/header.jpg' %});">
+        <div class="container text-center py-5">
+            <h1 class="text-primary mb-4" style="font-family:courier;font-size:20px">Please fill the form below</h1>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <div class="input-group" style="margin-bottom:15px">
+                        <select class="form-control" style="" required name="from" >
+                            <option value="">-----select location-----</option>
+                            {% for location in location_list %}
+                                <option>{{location}}</option>
+                            {% endfor %}
+                        </select>
+
+                </div>
+
+                <div class="input-group" style="margin-bottom:15px">
+                        <select class="form-control" style="" required name="to" >
+                            <option value="" >-----select destination-----</option>
+                            {% for location in location_list %}
+                                <option>{{location}}</option>
+                            {% endfor %}
+                        </select>
+
+                </div>
+
+                <div class="input-group" style="margin-bottom:15px">
+                        <select class="form-control" style="" required name="type" >
+                            <option value="">-----select item type-----</option>
+                            <option>Automobile</option>
+                            <option>Chemical/Drugs</option>
+                            <option>Food</option>
+                            <option>Perishables</option>
+                            <option>Clothing</option>
+                            <option>Breakable</option>
+                            <option>Others</option>
+                        </select>
+
+                </div>
+
+                <div class="input-group" style="margin-bottom:15px">
+                        <input type="text" class="form-control border-light" style="padding: 30px;" required name="info" autocomplete="off" placeholder="Additional Info">
+
+                </div>
+
+                <div class="input-group" style="margin-bottom:15px">
+                        <input type="submit" style="margin:auto;width:100px;margin-top:20px" class="btn btn-primary" >
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</form>
+
+
+
+{%endblock %}

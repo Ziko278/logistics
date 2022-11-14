@@ -1,0 +1,110 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+{% block 'main' %}
+<!-- Header Start -->
+<form action="{% url 'track' %}">
+    <div class="jumbotron jumbotron-fluid mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url({% static 'home/images/header.jpg' %});">
+        <div class="container text-center py-5">
+            <h1 class="text-primary mb-4" style="font-family:courier">{{ site_info.motto|title }}</h1>
+            <h1 class="text-white display-3 mb-5" style="font-family:cursive">Logistics Services</h1>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+
+                        <input type="text" class="form-control border-light" style="padding: 30px;" required name="tracking_id" placeholder="Enter a Tracking ID">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-3">Track</button>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</form>
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid w-100" src="{% static 'home/images/logistic.jpeg' %}" alt="">
+                    <div class="bg-primary text-dark text-center p-4">
+                        <h3 class="m-0">7+ Years Experience</h3>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-primary text-uppercase font-weight-bold">About Us</h6>
+                    <h1 class="mb-4">
+                        Trusted & Faster Logistic Service Provider</h1>
+                    <p class="mb-4">Our tracking system makes it easy to see the status of your shipment and also get 24/7 updates wherever you are.</p>
+
+                </div>
+            </div>
+        </div>
+        <!-- Video Modal -->
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <h6 class="text-primary text-uppercase font-weight-bold">Our Services</h6>
+                <h1 class="mb-4">Best Logistic Services</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                        <i class="fa fa-2x fa-plane text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Air Freight</h6>
+                    </div>
+                    <p style="text-align:left">Increase Speed and Reliability while reducing cost of transporting your urgent cargo with our Global Air Freight solutions</p>
+                    <a class="border-bottom text-decoration-none" href="{% url 'services' %}#air">Read More</a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                        <i class="fa fa-2x fa-ship text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Ocean Freight</h6>
+                    </div>
+                    <p style="text-align:left">Low cost and secure Transportation for your cargo, with over a million cargo annually.</p>
+                    <a class="border-bottom text-decoration-none" href="{% url 'services' %}#ship">Read More</a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                        <i class="fa fa-2x fa-truck text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Land Transport</h6>
+                    </div>
+                    <p style="text-align:left">By truck, rail or barge. We take your goods from one door to the next. Secure and affordable logistic</p>
+                    <a class="border-bottom text-decoration-none" href="{% url 'services' %}#truck">Read More</a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                        <i class="fa fa-2x fa-store text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Cargo Storage</h6>
+                    </div>
+                    <p style="text-align:left">Small to Large cargo, short term to long term, we have your cargo store securely with storage facilities over the globe.</p>
+                    <a class="border-bottom text-decoration-none" href="{% url 'services' %}#storage">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+{%endblock %}
